@@ -257,9 +257,11 @@ TWEAKS = {
             "name": "Enable Ultimate Performance Power Plan",
             "description": "Unlocks and activates Windows' hidden max-performance plan.",
             "risk": "moderate", "warning": "Increases power draw / heat, not ideal for laptops on battery.",
+            # Uses a fixed GUID so the plan is only created once (no duplicate
+            # "Ultimate Performance" entries piling up) and can be activated directly.
             "apply": [
-                r'powercfg -duplicatescheme e9a42b02-d5df-448d-aa00-03f14749eb61',
-                r'powershell -Command "$p = (powercfg -l | Select-String \'Ultimate\'); if($p){$id=($p -split \" \")[3]; powercfg -setactive $id}"',
+                r'powercfg /query b2425c0f-d797-4fb5-b6d9-691c07321d4c >nul 2>&1 || powercfg -duplicatescheme e9a42b02-d5df-448d-aa00-03f14749eb61 b2425c0f-d797-4fb5-b6d9-691c07321d4c',
+                r'powercfg -setactive b2425c0f-d797-4fb5-b6d9-691c07321d4c',
             ],
             "revert": [r'powercfg -setactive SCHEME_BALANCED'],
         },

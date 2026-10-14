@@ -18,6 +18,6 @@ _PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 
 def resource_path(*relative_parts) -> str:
-    """Absolute path to a bundled resource, e.g. resource_path("data", "power_plans", "BungusPower.pow")."""
+    """Absolute path to a bundled resource, e.g. resource_path("assets", "icon.png")."""
     base_path = getattr(sys, "_MEIPASS", _PROJECT_ROOT)
     return os.path.join(base_path, *relative_parts)

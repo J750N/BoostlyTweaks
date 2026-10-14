@@ -1,5 +1,5 @@
 """
-Checks GitHub's public Releases API to see if a newer BungusTweaks version
+Checks GitHub's public Releases API to see if a newer Boostly Tweaks version
 is available. Uses only the standard library (urllib) - no new dependency,
 no auth needed since the repo is public. Best-effort: any failure (offline,
 rate-limited, repo renamed, etc.) just returns None rather than raising.
@@ -8,9 +8,9 @@ rate-limited, repo renamed, etc.) just returns None rather than raising.
 import json
 import urllib.request
 
-GITHUB_API_URL = "https://api.github.com/repos/J750N/bungustweaks/releases/latest"
-GITHUB_ALL_RELEASES_API_URL = "https://api.github.com/repos/J750N/bungustweaks/releases"
-GITHUB_RELEASES_URL = "https://github.com/J750N/bungustweaks/releases"
+GITHUB_API_URL = "https://api.github.com/repos/J750N/BoostlyTweaks/releases/latest"
+GITHUB_ALL_RELEASES_API_URL = "https://api.github.com/repos/J750N/BoostlyTweaks/releases"
+GITHUB_RELEASES_URL = "https://github.com/J750N/BoostlyTweaks/releases"
 
 
 def _version_parts(v: str):
@@ -23,7 +23,7 @@ def check_for_update(current_version: str, timeout: int = 5):
     try:
         req = urllib.request.Request(
             GITHUB_API_URL,
-            headers={"Accept": "application/vnd.github+json", "User-Agent": "BungusTweaks"},
+            headers={"Accept": "application/vnd.github+json", "User-Agent": "BoostlyTweaks"},
         )
         with urllib.request.urlopen(req, timeout=timeout) as resp:
             data = json.loads(resp.read().decode("utf-8"))
@@ -86,7 +86,7 @@ def get_all_releases(timeout: int = 8):
     try:
         req = urllib.request.Request(
             GITHUB_ALL_RELEASES_API_URL,
-            headers={"Accept": "application/vnd.github+json", "User-Agent": "BungusTweaks"},
+            headers={"Accept": "application/vnd.github+json", "User-Agent": "BoostlyTweaks"},
         )
         with urllib.request.urlopen(req, timeout=timeout) as resp:
             data = json.loads(resp.read().decode("utf-8"))

@@ -10,7 +10,7 @@ import subprocess
 import os
 import datetime
 
-APP_DIR = os.path.join(os.environ.get("LOCALAPPDATA", os.path.expanduser("~")), "BungusTweaks")
+from core.state import APP_DIR
 BACKUP_DIR = os.path.join(APP_DIR, "backups")
 
 REG_ROOTS_TO_BACKUP = [
@@ -24,7 +24,7 @@ def _ensure_dir():
     os.makedirs(BACKUP_DIR, exist_ok=True)
 
 
-def create_restore_point(description="PC Tweaker Restore Point"):
+def create_restore_point(description="Boostly Tweaks Restore Point"):
     """Creates a Windows System Restore Point. Requires admin."""
     cmd = (
         'powershell -NoProfile -Command '

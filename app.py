@@ -1,5 +1,5 @@
 """
-BungusTweaks — a free, beginner-friendly Windows tuning tool.
+Boostly Tweaks — a free, beginner-friendly Windows tuning tool.
 Run with: python app.py   (Windows only, run as Administrator for full effect)
 """
 
@@ -77,7 +77,7 @@ def _mix_bg(color_hex):
 class App(ctk.CTk):
     def __init__(self):
         super().__init__()
-        self.title("BungusTweaks")
+        self.title("Boostly Tweaks")
         icon_path = resource_path(os.path.join("assets", "icon.ico"))
         if os.name == "nt" and os.path.exists(icon_path):
             try:
@@ -152,7 +152,7 @@ class App(ctk.CTk):
         logo_row = ctk.CTkFrame(self.sidebar_scroll, fg_color="transparent")
         logo_row.pack(fill="x", padx=16, pady=(18, 4))
         ctk.CTkLabel(logo_row, text="⬡", font=("Segoe UI", 20), text_color=ACCENT).pack(side="left")
-        ctk.CTkLabel(logo_row, text=" BUNGUSTWEAKS", font=("Segoe UI", 15, "bold")).pack(side="left")
+        ctk.CTkLabel(logo_row, text=" BOOSTLY TWEAKS", font=("Segoe UI", 15, "bold")).pack(side="left")
         GradientBar(self.sidebar_scroll, height=3, bg=SIDEBAR_BG).pack(fill="x", padx=16, pady=(6, 8))
 
         # Admin status pill - right under the logo, the first thing you see
@@ -374,7 +374,7 @@ class App(ctk.CTk):
             font=("Segoe UI", 12), text_color="#9CA3AF", wraplength=310, justify="left",
         ).pack(padx=24, anchor="w")
 
-        ctk.CTkButton(win, text="Close BungusTweaks", fg_color=ACCENT, command=self.destroy).pack(
+        ctk.CTkButton(win, text="Close Boostly Tweaks", fg_color=ACCENT, command=self.destroy).pack(
             padx=24, pady=24, fill="x"
         )
 
@@ -448,7 +448,7 @@ if __name__ == "__main__":
     except Exception:
         import traceback
         print("=" * 60)
-        print("BungusTweaks crashed. Full error below:")
+        print("Boostly Tweaks crashed. Full error below:")
         print("=" * 60)
         traceback.print_exc()
         input("\nPress Enter to close...")

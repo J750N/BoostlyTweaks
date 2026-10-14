@@ -3,7 +3,7 @@ from tkinter import filedialog
 from pages.widgets import Card, SectionHeader, LogConsole, ACCENT
 from core import theme, startup, state, runner, nvidia_inspector, updates
 
-APP_VERSION = "1.0.2"
+APP_VERSION = "1.1.0"
 
 
 class SettingsPage(ctk.CTkFrame):
@@ -16,7 +16,7 @@ class SettingsPage(ctk.CTkFrame):
         outer = ctk.CTkScrollableFrame(self, fg_color="transparent")
         outer.pack(fill="both", expand=True, padx=30, pady=24)
 
-        SectionHeader(outer, "Settings", "Personalize how BungusTweaks looks and behaves.").pack(
+        SectionHeader(outer, "Settings", "Personalize how Boostly Tweaks looks and behaves.").pack(
             anchor="w", fill="x", pady=(0, 16)
         )
 
@@ -51,7 +51,7 @@ class SettingsPage(ctk.CTkFrame):
         startup_row = ctk.CTkFrame(behavior, fg_color="transparent")
         startup_row.pack(fill="x", padx=18, pady=6)
         startup_row.grid_columnconfigure(0, weight=1)
-        ctk.CTkLabel(startup_row, text="Launch BungusTweaks with Windows", font=("Segoe UI", 13)).grid(
+        ctk.CTkLabel(startup_row, text="Launch Boostly Tweaks with Windows", font=("Segoe UI", 13)).grid(
             row=0, column=0, sticky="w"
         )
         ctk.CTkLabel(
@@ -150,7 +150,7 @@ class SettingsPage(ctk.CTkFrame):
         )
         self.update_button.pack(side="right")
         ctk.CTkLabel(
-            about, text=f"BungusTweaks v{APP_VERSION}\nFree & open source Windows tuning tool.",
+            about, text=f"Boostly Tweaks v{APP_VERSION}\nFree & open source Windows tuning tool.",
             font=("Segoe UI", 12), text_color="#9CA3AF", justify="left",
         ).pack(anchor="w", padx=18, pady=(0, 8))
 

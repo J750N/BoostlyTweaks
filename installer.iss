@@ -1,9 +1,9 @@
-; BungusTweaks Installer Script
+; Boostly Tweaks Installer Script
 ; Requires Inno Setup (free): https://jrsoftware.org/isdl.php
 ;
-; This turns dist\BungusTweaks.exe (built by build_exe.bat) into a proper
+; This turns dist\BoostlyTweaks.exe (built by build_exe.bat) into a proper
 ; Setup.exe that:
-;   - Installs to C:\Program Files\BungusTweaks
+;   - Installs to C:\Program Files\Boostly Tweaks
 ;   - Creates a Start Menu shortcut
 ;   - Creates a Desktop shortcut
 ;   - Optionally installs MSI Afterburner via winget (real winget package,
@@ -18,18 +18,18 @@
 ;   - Launches the app automatically when setup finishes
 ;
 ; HOW TO BUILD:
-;   1. Run build_exe.bat first (creates dist\BungusTweaks.exe)
+;   1. Run build_exe.bat first (creates dist\BoostlyTweaks.exe)
 ;   2. Open this file in Inno Setup Compiler (double-click it once Inno Setup is installed)
 ;   3. Click Build > Compile (or press Ctrl+F9)
-;   4. Your installer appears in the Output\ folder as BungusTweaks-Setup.exe
+;   4. Your installer appears in the Output\ folder as BoostlyTweaks-Setup.exe
 
-#define MyAppName "BungusTweaks"
-#define MyAppVersion "1.0.2"
-#define MyAppPublisher "BungusTweaks"
-#define MyAppExeName "BungusTweaks.exe"
+#define MyAppName "Boostly Tweaks"
+#define MyAppVersion "1.1.0"
+#define MyAppPublisher "Boostly Tweaks"
+#define MyAppExeName "BoostlyTweaks.exe"
 
 [Setup]
-AppId={{B7B7A4B0-6E6E-4B6A-9E1A-BUNGUSTWEAKS1}}
+AppId={{6A0CB70F-0E13-4D78-93D0-A2C26AD166CD}
 AppName={#MyAppName}
 AppVersion={#MyAppVersion}
 AppPublisher={#MyAppPublisher}
@@ -37,7 +37,7 @@ DefaultDirName={autopf}\{#MyAppName}
 DefaultGroupName={#MyAppName}
 DisableProgramGroupPage=yes
 OutputDir=Output
-OutputBaseFilename=BungusTweaks-Setup
+OutputBaseFilename=BoostlyTweaks-Setup
 Compression=lzma
 SolidCompression=yes
 WizardStyle=modern

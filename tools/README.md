@@ -1,8 +1,8 @@
 # Bundled Tools Folder
 
-BungusTweaks can launch vendor tools with **zero settings needed** if you
+Boostly Tweaks can launch vendor tools with **zero settings needed** if you
 drop the real files into the matching subfolder below. This is entirely
-optional — without them, BungusTweaks falls back to checking your normal
+optional — without them, Boostly Tweaks falls back to checking your normal
 Windows install, and if that's not found either, it opens the official
 download page instead.
 
@@ -30,9 +30,9 @@ step at all.
 
 The bigger ones (NVIDIA App, AMD Adrenalin, MSI Afterburner) are full
 installed applications — realistically, most people already have these
-installed from setting up their PC, so BungusTweaks will usually find them
+installed from setting up their PC, so Boostly Tweaks will usually find them
 automatically without you needing to touch this folder at all. Bundling them
-here is only useful if you want a fully self-contained BungusTweaks folder
+here is only useful if you want a fully self-contained Boostly Tweaks folder
 that works on a brand new PC with nothing else installed.
 
 ## Note for packaging into an installer

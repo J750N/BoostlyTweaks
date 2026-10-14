@@ -6,7 +6,7 @@ applied when it's reopened (so toggles show the correct on/off state).
 import json
 import os
 
-APP_DIR = os.path.join(os.environ.get("LOCALAPPDATA", os.path.expanduser("~")), "BungusTweaks")
+APP_DIR = os.path.join(os.environ.get("LOCALAPPDATA", os.path.expanduser("~")), "BoostlyTweaks")
 STATE_FILE = os.path.join(APP_DIR, "state.json")
 
 

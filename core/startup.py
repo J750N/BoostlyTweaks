@@ -8,7 +8,7 @@ import sys
 import os
 
 RUN_KEY = r"HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Run"
-VALUE_NAME = "BungusTweaks"
+VALUE_NAME = "BoostlyTweaks"
 
 
 def _launch_command() -> str:
